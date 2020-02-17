@@ -1,0 +1,194 @@
+@font-face {
+  font-family: Bungee_Regular;
+  src: url(../fonts/Bungee/Bungee-Regular.ttf);
+}
+@font-face {
+  font-family: Bungee_Hairline;
+  src: url(../fonts/Bungee_Hairline/BungeeHairline-Regular.ttf);
+}
+@font-face {
+  font-family: Bungee_Inline;
+  src: url(../fonts/Bungee_Inline/BungeeInline-Regular.ttf);
+}
+@font-face {
+  font-family: Catameran;
+  src: url(../fonts/Catamaran/Catamaran-Regular.ttf);
+}
+@font-face {
+  font-family: Catameran;
+  src: url(../fonts/Catamaran/Catamaran-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Catameran;
+  src: url(../fonts/Catamaran/Catamaran-ExtraBold.ttf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Catameran;
+  src: url(../fonts/Catamaran/Catamaran-ExtraLight.ttf);
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Conformity;
+  src: url(../fonts/Conformity/Conformity.TTF);
+}
+h2 {
+  font-family: Bungee_regular;
+}
+
+p {
+  font-family: Catameran;
+}
+
+header #navbar-header {
+  margin: 0;
+  padding: 0;
+  background-color: #252a2b;
+  overflow: hidden;
+}
+header #navbar-header #navigation-logo-container {
+  position: relative;
+}
+header #navbar-header #navigation-logo-container .navbar-brand {
+  padding: 0 80px;
+  margin: 0;
+  background-color: #844389;
+}
+header #navbar-header #navigation-logo-container .navbar-brand h1 {
+  font-family: Bungee_regular;
+  font-size: 37px;
+  margin: 0;
+  padding: 32px;
+}
+header #navbar-header #navigation-logo-container #navigation-beer-logo {
+  position: absolute;
+  left: 35px;
+  top: 13px;
+  transform: rotateZ(17deg);
+}
+header #navbar-header #navigation-logo-container #navigation-splatter {
+  position: absolute;
+  right: -81px;
+  height: 117px;
+  top: -6px;
+}
+header #navbar-header #nav-menu {
+  height: 100%;
+}
+header #navbar-header #nav-menu li a {
+  font-family: Catamaran;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+header #navbar-header #nav-menu li a:hover {
+  background-color: #844389;
+}
+header #navbar-header #nav-menu li:visited {
+  background-color: #844389;
+}
+header #header-content {
+  padding: 53px 37px 53px 87px;
+}
+header #header-content #header-welcome {
+  padding-right: 87px;
+}
+header #header-content #header-welcome #header-welcome-copy {
+  padding-left: 22px;
+  font-size: 16px;
+  border-left: 8px solid #844389;
+  line-height: 24px;
+}
+header #header-content #header-welcome #header-find-inner-punk {
+  width: fit-content;
+  margin: auto;
+}
+header #header-content #header-welcome #header-find-inner-punk a {
+  font-family: Conformity;
+  color: #844389;
+  font-size: 18px;
+}
+header #header-content #header-welcome #header-find-inner-punk img {
+  height: 29px;
+  position: relative;
+  bottom: 4px;
+}
+header #header-content #header-mailing-list {
+  background-color: #844389;
+  padding: 0;
+  border-radius: 6px;
+}
+header #header-content #header-mailing-list h3 {
+  color: #fff;
+  background-color: #252a2b;
+  font-family: Bungee_Regular;
+  font-size: 19px;
+  padding: 16px 34px;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+header #header-content #header-mailing-list #header-mailing-list-interior {
+  padding: 10px 30px 22px 30px;
+}
+header #header-content #header-mailing-list #header-mailing-list-interior img {
+  display: block;
+  width: 55px;
+  margin: auto;
+}
+header #header-content #header-mailing-list #header-mailing-list-interior p {
+  font-size: 13px;
+  line-height: 1em;
+  color: #fff;
+  margin-top: 10px;
+}
+header #header-content #header-mailing-list #header-mailing-list-interior #header-mailing-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+header #header-content #header-mailing-list #header-mailing-list-interior #header-mailing-list-form input {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+}
+header #header-content #header-mailing-list #header-mailing-list-interior #header-mailing-list-form button {
+  color: #fff;
+  background: #252a2b;
+  border: 0;
+  padding: 10px 39px;
+  margin-top: 16px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+h2 {
+  font-family: Bungee_regular;
+}
+
+p {
+  font-family: Catameran;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+#filter-form {
+  display: none;
+}
+
+#set-list #filter #filter-form {
+  display: none;
+}
+#set-list #filter:hover #filter-form {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */

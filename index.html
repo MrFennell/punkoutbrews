@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Punk Out Brews</title>
+  <meta name="description" content="Punk Out Brews">
+  <meta name="author" content="Ryan Fennell">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/sliders/jquery.range.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg" id="navbar-header" role="navigation">
+        <div id="navigation-logo-container">
+          <img id="navigation-beer-logo" src="images/icon_beer_mug.svg"  height="80px"/>
+          <a href="#" class="navbar-brand"> <h1>Punk Out Brews</h1></a>
+          <img id="navigation-splatter" src="images/splatter.svg"  height="120px"/>
+        </div>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu"  aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active "><a href='#' class="nav-link active" >Our Brews</a></li>
+            <li class="nav-item"><a href='#' class="nav-link" >Where To Buy</a></li>
+            <li class="nav-item"><a href='#' class="nav-link" >Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div id="header-content" class="container-fluid">
+      <div class="row">
+        <div id="header-welcome" class="col-md-8 col-sm-12">
+          <h2>Welcome!</h2>
+          <p id="header-welcome-copy">
+            Back in 1992 Phillipe Gonzolaz and Roger Carpendar set off on a mission to create a perfectly
+            balanced beer that would be refreshing, delicious, and infinitely drinkable. Their flagship lager
+            took off and soon after they started experimenting with different styles of beer and more unique
+            flavors and ingredients. Now Punk Out Brews has over 30 awesomely distinct award-winning
+            beers for every pallette.
+          </p>
+          <div id="header-find-inner-punk">
+            <a href="#">Find your inner Punk!</a>
+            <img src="images/icon_rocknroll_hand.svg" height="40px" alt="Rock and Roll Hand Icon"/>
+          </div>
+        </div>
+        <div id="header-mailing-list" class="col-md-4 col-sm-12">
+          <h3>Join our mailing list!</h3>
+          <div id="header-mailing-list-interior">
+            <img src="images/icon_mailing_list.svg" height="30px" alt="Mailing List Icon">
+            <p>Sign up and we’ll send you info about exclusive beer
+              premieres, festivals we’ll be at, and special promotions!</p>
+            <form action="#" id="header-mailing-list-form">
+              <input type="text" placeholder="beerafficionado@rockstar.com">
+              <button type="submit">Heck yes!</button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="set-list">
+    <nav id="set-list-nav">
+      <h3 >The Set List</h3>
+      <div>
+          
+          <div id="filter" >
+            <div href="#" id="filter-link">
+              <a><img src="images/icon_filter.svg" height="20px" alt="Filter" />
+              Filter By
+            </a>
+          </div>
+            <form method="GET" id="filter-form" name="filter-form" action="fetch.php">
+              <div id="filter-section-flavor-notes" class="filter-section">
+                <p class="filter-section-title">Flavor Notes</p>
+                <div id="filter-checkboxes">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="hoppy" id="hoppy" >
+                    <label class="form-check-label" for="hoppy">
+                      Hoppy
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="citrus" id="Citrus">
+                    <label class="form-check-label" for="Citrus">
+                      Citrus
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="malty" id="malty">
+                    <label class="form-check-label" for="malty">
+                      Malty
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="herbal" id="herbal">
+                    <label class="form-check-label" for="herbal">
+                      Herbal
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="bitter" id="bitter">
+                    <label class="form-check-label" for="bitter">
+                      Bitter
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="fruity" id="fruity">
+                    <label class="form-check-label" for="fruity">
+                      Fruity
+                    </label>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="dropdown-divider"></div>
+              <div id="filter-section-ibu" class="filter-section">
+                <p class="filter-section-title">IBU</p>
+                <div class="ibu-slider-container">
+                  <input class="range-slider-ibu" type="hidden" value="0,80"/>
+                </div>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <div id="filter-section-abv" class="filter-section">
+                <p class="filter-section-title">ABV</p>
+                <div class="abv-slider-container">
+                  <input class="range-slider-abv" type="hidden" value="5,11"/>
+
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div class="input-group mb-3 nav-item">
+        <input type="text" class="form-control" id="beerSearchInput" placeholder="Search for Beer Name or Type" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="beerSearch" >Button</button>
+        </div>
+      </div>
+
+
+    </nav>
+      
+    <div id="results">
+
+    </div>
+  </div>
+
+<script src="scripts/search.js"></script>
+<script src="scripts/sliders/jquery.range.js"></script>
+<script src="scripts/sliders/sliderSettings.js"></script>
+
+</body>
+
+</html>

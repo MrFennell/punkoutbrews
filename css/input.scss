@@ -1,0 +1,39 @@
+//the .scss file is used to make the SASS changes that will be compiled into styles.css.
+
+$purple: #844389;
+$black: #252a2b;
+$white: #fff;
+$orange: #dd9937;
+
+
+$font-size-regular: 16px;
+@import "./fonts.scss"; 
+@import "./header.scss";
+
+h2{
+    font-family: Bungee_regular;
+}
+p{font-family: Catameran;}
+.show{display: block;}
+.hide{display: none;}
+#filter-form{
+    display: none;
+}
+#set-list{
+    #filter{
+        #filter-form {
+            display: none;
+          }
+    }
+    #filter:hover #filter-form{
+        display: block;
+    }
+    // #set-list-nav{
+        
+       
+    //     #filter-link:hover #filter-form:hover{
+    //         display: block;
+
+    //     }
+    // }
+}
