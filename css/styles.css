@@ -336,6 +336,9 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   border: 0;
   background-color: #fff;
 }
+#set-list #set-list-header #set-list-header-controls #set-list-search .fa-search {
+  color: #727272;
+}
 #set-list #results {
   min-height: 100vh;
   padding-top: 72px;
