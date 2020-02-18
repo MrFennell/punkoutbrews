@@ -6,10 +6,14 @@
   <meta name="description" content="Punk Out Brews">
   <meta name="author" content="Ryan Fennell">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
 
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fd536d6465.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/sliders/jquery.range.css">
@@ -72,96 +76,89 @@
     </div>
   </header>
   <div id="set-list">
-    <nav id="set-list-nav">
-      <h3 >The Set List</h3>
-      <div>
-          
-          <div id="filter" >
-            <div href="#" id="filter-link">
-              <a><img src="images/icon_filter.svg" height="20px" alt="Filter" />
-              Filter By
-            </a>
+    <div id="set-list-header">
+      <div id="set-list-header-heading">
+        <h3>The Set List</h3>
+      </div>
+      <div id="set-list-header-controls" >
+        <div id="filter" >
+          <div href="#" id="filter-link">
+              <img src="images/icon_filter.svg" height="20px" alt="Filter" />
+              <a>Filter By</a>
           </div>
-            <form method="GET" id="filter-form" name="filter-form" action="fetch.php">
-              <div id="filter-section-flavor-notes" class="filter-section">
-                <p class="filter-section-title">Flavor Notes</p>
-                <div id="filter-checkboxes">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="hoppy" id="hoppy" >
-                    <label class="form-check-label" for="hoppy">
-                      Hoppy
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="citrus" id="Citrus">
-                    <label class="form-check-label" for="Citrus">
-                      Citrus
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="malty" id="malty">
-                    <label class="form-check-label" for="malty">
-                      Malty
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="herbal" id="herbal">
-                    <label class="form-check-label" for="herbal">
-                      Herbal
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="bitter" id="bitter">
-                    <label class="form-check-label" for="bitter">
-                      Bitter
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="fruity" id="fruity">
-                    <label class="form-check-label" for="fruity">
-                      Fruity
-                    </label>
-                  </div>
+          <form method="GET" id="filter-form" name="filter-form" action="fetch.php">
+            <div id="filter-section-flavor-notes" class="filter-section">
+              <p class="filter-section-title">Flavor Notes</p>
+              <div id="filter-checkboxes" class="filter-section-content">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="hoppy" id="hoppy" >
+                  <label class="form-check-label" for="hoppy">
+                    Hoppy
+                  </label>
                 </div>
-              </div>
-            
-              <div class="dropdown-divider"></div>
-              <div id="filter-section-ibu" class="filter-section">
-                <p class="filter-section-title">IBU</p>
-                <div class="ibu-slider-container">
-                  <input class="range-slider-ibu" type="hidden" value="0,80"/>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="citrus" id="Citrus">
+                  <label class="form-check-label" for="Citrus">
+                    Citrus
+                  </label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="malty" id="malty">
+                  <label class="form-check-label" for="malty">
+                    Malty
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="herbal" id="herbal">
+                  <label class="form-check-label" for="herbal">
+                    Herbal
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="bitter" id="bitter">
+                  <label class="form-check-label" for="bitter">
+                    Bitter
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="fruity" id="fruity">
+                  <label class="form-check-label" for="fruity">
+                    Fruity
+                  </label>
+                </div>
+            </div>
+            <div id="filter-section-ibu" class="filter-section">
+              <p class="filter-section-title">IBU</p>
+              <div class="slider-container" class="filter-section-content">
+                <input class="range-slider-ibu" type="hidden" value="0,80"/>
               </div>
-              <div class="dropdown-divider"></div>
+            </div>
 
-              <div id="filter-section-abv" class="filter-section">
-                <p class="filter-section-title">ABV</p>
-                <div class="abv-slider-container">
-                  <input class="range-slider-abv" type="hidden" value="5,11"/>
+            <div id="filter-section-abv" class="filter-section">
+              <p class="filter-section-title">ABV</p>
+              <div class="slider-container" class="filter-section-content">
+                <input class="range-slider-abv" type="hidden" value="5,11"/>
 
-                </div>
               </div>
+            </div>
           </form>
         </div>
       </div>
-      <div class="input-group mb-3 nav-item">
-        <input type="text" class="form-control" id="beerSearchInput" placeholder="Search for Beer Name or Type" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="beerSearch" >Button</button>
-        </div>
-      </div>
-
-
-    </nav>
-      
-    <div id="results">
-
+      <div id="set-list-search" class="input-group ">
+        <input class="form-control" id="beerSearchInput" type="search"  placeholder="Search for Beer Name or Type" aria-label="Search for Beer Name or Type">
+        <span class="input-group-append">
+          <button class="btn" id="beerSearch" type="submit">
+                <i class="fa fa-search"></i>
+          </button>
+        </span>
     </div>
-  </div>
-
+    </div>
+</div>
+<div id="results">  
+</div>
 <script src="scripts/search.js"></script>
-<script src="scripts/sliders/jquery.range.js"></script>
 <script src="scripts/sliders/sliderSettings.js"></script>
+<script src="scripts/sliders/jquery.range.js"></script>
 
 </body>
 

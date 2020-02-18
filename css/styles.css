@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Bungee_Regular;
   src: url(../fonts/Bungee/Bungee-Regular.ttf);
@@ -164,6 +165,10 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   font-size: 13px;
 }
 
+html, body {
+  height: 100%;
+}
+
 h2 {
   font-family: Bungee_regular;
 }
@@ -180,15 +185,152 @@ p {
   display: none;
 }
 
-#filter-form {
-  display: none;
+#set-list #set-list-header {
+  background-color: #252a2b;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 26px 0 87px;
 }
-
-#set-list #filter #filter-form {
-  display: none;
+#set-list #set-list-header h3 {
+  font-family: Bungee_regular;
+  color: #fff;
+  margin: 0;
 }
-#set-list #filter:hover #filter-form {
+#set-list #set-list-header #set-list-header-controls {
+  display: flex;
+  height: 100%;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 60px 0 20px;
+  cursor: pointer;
+  background-color: #844389;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-link img {
+  margin-right: 12px;
+  height: 26px;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-link a {
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form {
+  display: none;
+  position: absolute;
+  width: 394px;
+  cursor: pointer;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form .filter-section {
+  background-color: #9b82a0;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form .filter-section-title {
+  padding: 10px 21px;
+  color: #fff;
+  background-color: #947099;
+  text-transform: uppercase;
+  margin: 0;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form #filter-checkboxes {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 40px;
+  padding: 24px 21px 30px 30px;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form #filter-checkboxes input[type=checkbox] {
+  border: 0;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form #filter-checkboxes label {
+  color: #fff;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form .filter-section-content {
+  background-color: #9b82a0;
+}
+#set-list #set-list-header #set-list-header-controls #filter #filter-form .slider-container {
+  padding: 24px 0 30px 0;
+}
+#set-list #set-list-header #set-list-header-controls #filter:hover #filter-form {
   display: block;
+}
+#set-list #set-list-header #set-list-header-controls #set-list-search {
+  display: flex;
+  height: 52%;
+  margin: auto;
+  margin-left: 33px;
+}
+#set-list #set-list-header #set-list-header-controls #set-list-search input, #set-list #set-list-header #set-list-header-controls #set-list-search button {
+  font-size: 14px;
+  border-radius: 0;
+  border: 0;
+  background-color: #fff;
+}
+#set-list #results {
+  min-height: 200px;
+  padding-top: 72px;
+  padding: 72px 0 0 88px;
+}
+#set-list #results .result {
+  width: 80%;
+  display: flex;
+  padding-bottom: 115px;
+}
+#set-list #results .result .result-text {
+  padding-left: 45px;
+}
+#set-list #results .result .result-text .result-name {
+  font-family: Bungee_Regular;
+  font-size: 25px;
+  margin: 0;
+}
+#set-list #results .result .result-text .result-tagline {
+  font-family: Conformity;
+  font-size: 25px;
+  color: #dd9937;
+}
+#set-list #results .result .result-text .result-ibu {
+  float: left;
+  color: #727272;
+  border-right: 1px solid #727272;
+  padding-right: 14px;
+}
+#set-list #results .result .result-text .result-ibu span {
+  font-weight: bold;
+  margin-right: 14px;
+  color: #252a2b;
+}
+#set-list #results .result .result-text .result-abv {
+  float: left;
+  color: #727272;
+  padding-left: 14px;
+}
+#set-list #results .result .result-text .result-abv span {
+  font-weight: bold;
+  margin-right: 14px;
+  color: #252a2b;
+}
+#set-list #results .result .result-text .result-description {
+  clear: both;
+}
+#set-list #results .result .result-text .result-food-pairing-list {
+  background-image: url(../images/icon_food_pairing.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  padding-left: 71px;
+  list-style: none;
+}
+#set-list #results .result .result-text ul li::before {
+  content: "■";
+  color: #dd9937;
+  font-size: 0.9em;
+  display: inline-block;
+  width: 2em;
+  margin-left: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
