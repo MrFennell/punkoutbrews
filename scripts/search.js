@@ -102,32 +102,39 @@ function filterResults(data){
             dataFilter = data;
         }
         
-        for (i = 0; i < dataFilter.length; i++){
-            
-            const resultDiv = document.createElement("div"); //create new div for each result entry and populate
-            $('div#results').append(resultDiv);
-            $(resultDiv).attr('id', 'result-'+dataFilter[i].id);
-            $(resultDiv).addClass('result');
-            $(resultDiv).append("<div class='result-beer-image-container'><img alt='result-beer-image' class='beer-photo' src='"+dataFilter[i].image_url+"' height='328px' width='auto';/></div>");
-            
-            const textDiv = document.createElement("div"); //create another div to make styling the image and text easier
-            $(textDiv).addClass('result-text');
-            $(resultDiv).append(textDiv);
-            $(textDiv).append("<p class='result-name'>"+dataFilter[i].name+"</p>");
-            $(textDiv).append("<p class='result-tagline'>"+dataFilter[i].tagline+"</p>");
-            $(textDiv).append("<p class='result-ibu'><span class='result-ibu-label'>IBU</span>"+dataFilter[i].ibu.toFixed(1)+"</p>"); //show first decimal of ibu
-            $(textDiv).append("<p class='result-abv'><span class='result-abv-label'>ABV</span>"+dataFilter[i].abv.toFixed(1)+"</p>"); //show first decimal of abv
-            $(textDiv).append("<p class='result-description'>"+dataFilter[i].description+"</p>");
+        if (dataFilter.length > 0){ //check if any results are left after filter
 
-            const newList = document.createElement( "ul" );
-            $(newList).addClass('result-food-pairing-list');
-            $(textDiv).append(newList);
-    
-            const foodPairings = dataFilter[i].food_pairing;
-            for (f = 0; f < foodPairings.length; f++){
+            for (i = 0; i < dataFilter.length; i++){
+                        
+                const resultDiv = document.createElement("div"); //create new div for each result entry and populate
+                $('div#results').append(resultDiv);
+                $(resultDiv).attr('id', 'result-'+dataFilter[i].id);
+                $(resultDiv).addClass('result');
+                $(resultDiv).append("<div class='result-beer-image-container'><img alt='result-beer-image' class='beer-photo' src='"+dataFilter[i].image_url+"' height='328px' width='auto';/></div>");
+                
+                const textDiv = document.createElement("div"); //create another div to make styling the image and text easier
+                $(textDiv).addClass('result-text');
+                $(resultDiv).append(textDiv);
+                $(textDiv).append("<p class='result-name'>"+dataFilter[i].name+"</p>");
+                $(textDiv).append("<p class='result-tagline'>"+dataFilter[i].tagline+"</p>");
+                $(textDiv).append("<p class='result-ibu'><span class='result-ibu-label'>IBU</span>"+dataFilter[i].ibu.toFixed(1)+"</p>"); //show first decimal of ibu
+                $(textDiv).append("<p class='result-abv'><span class='result-abv-label'>ABV</span>"+dataFilter[i].abv.toFixed(1)+"</p>"); //show first decimal of abv
+                $(textDiv).append("<p class='result-description'>"+dataFilter[i].description+"</p>");
+
+                const newList = document.createElement( "ul" );
+                $(newList).addClass('result-food-pairing-list');
+                $(textDiv).append(newList);
+        
+                const foodPairings = dataFilter[i].food_pairing;
+                for (f = 0; f < foodPairings.length; f++){
                     $(newList).append("<li>"+dataFilter[i].food_pairing[f]+"</li>");
+                }
             }
         }
+        else{
+            $('div#results').append("<p class='results-no-results'>No results found.</p>");
+        }
+        
     }
 }
 

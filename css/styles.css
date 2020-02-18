@@ -337,7 +337,7 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   background-color: #fff;
 }
 #set-list #results {
-  min-height: 200px;
+  min-height: 100vh;
   padding-top: 72px;
   padding: 72px 0 0 88px;
 }
