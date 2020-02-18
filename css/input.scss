@@ -6,186 +6,21 @@ $white: #fff;
 $orange: #dd9937;
 $grey: #727272;
 
-$font-size-regular: 16px;
-$font-size-smaller: 14px;
+$font-size-regular: 22px; //16 pt font
+$font-size-smaller: 16px; //12 pt font
+$font-size-larger: 32px; //24 pt font
+$font-size-largest: 41px; //31 pt font
 
 @import "./fonts.scss"; 
 @import "./header.scss";
+@import "./setlist.scss";
+
 html,body {
     height:100%;
 }
 h2{
-    font-family: Bungee_regular;
+    font-family: Bungee_regular,  Arial, sans-serif;
 }
 p{
-    font-family: Catameran;
+    font-family: Catameran, Arial, sans-serif;
 }
-.show{display: block;}
-.hide{display: none;}
-
-#set-list{
-    #set-list-header{
-        background-color: $black;
-        list-style: none;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 60px;
-        padding: 0 26px 0 87px;
-        h3{
-            font-family: Bungee_regular;
-            color: $white;
-            margin: 0;
-        }
-        #set-list-header-controls{
-            display: flex;
-            height: 100%;
-            #filter{
-                #filter-link{
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    padding: 0 60px 0 20px;
-                    cursor: pointer;
-                    background-color: $purple;
-                    img{
-                        margin-right: 12px;
-                        height: 26px;
-                    }
-                    a{
-                        color: $white;
-                        text-transform: uppercase;
-                        white-space: nowrap;
-                    }
-                }
-                #filter-form {
-                    display: none; 
-                    position: absolute;
-                    width: 394px;
-                    cursor: pointer;
-                    .filter-section{
-                        background-color: #9b82a0;
-                    }
-                    .filter-section-title{
-                        padding: 10px 21px;
-                        color: $white;
-                        background-color: #947099;
-                        text-transform: uppercase;
-                        margin:0;
-                    }
-                    #filter-checkboxes{
-                        display: grid;
-                        grid-template-columns: 80px 80px 80px 80px;
-                        grid-template-rows: 40px;
-                        padding: 24px 21px 30px 30px;
-                        input[type=checkbox]{
-                            border: 0;
-                        }
-                        label{
-                            color: $white;
-                        }
-                    }
-                    
-                    .filter-section-content{
-                        background-color: #9b82a0;
-                    }
-
-                    .slider-container{
-                        padding: 24px 0 30px 0;
-                    }
-                   
-                }
-            }
-            #filter:hover #filter-form{
-                display: block;
-               
-            }
-  
-            #set-list-search{
-                display: flex;
-                height: 52%;
-                margin: auto; 
-                margin-left: 33px;
-                input, button{
-                    font-size: $font-size-smaller;
-                    border-radius: 0;
-                    border: 0;
-                    background-color:$white;
-                }
-            }
-        }
-    }
-    #results{
-        min-height: 200px;
-        padding-top:72px;
-        padding: 72px 0 0 88px;
-        .result{
-            width: 80%;
-            display: flex;
-            padding-bottom: 115px;
-
-            .result-text{
-                padding-left: 45px;
-                .result-name{
-                    font-family: Bungee_Regular;
-                    font-size: 25px;
-                    margin: 0;
-                }
-                .result-tagline{
-                    font-family: Conformity;
-                    font-size: 25px;
-                    color: $orange;
-                }
-                 
-                .result-ibu{
-                    float: left;
-                    color: $grey;
-                    border-right: 1px solid $grey;
-                    padding-right: 14px;
-                    span{
-                        font-weight: bold;
-                        margin-right: 14px;
-                        color: $black;
-                    }
-                    
-                }
-                
-                .result-abv{
-                    float: left;
-                    color: $grey;
-                    padding-left: 14px;
-                    span{
-                        font-weight: bold;
-                        margin-right: 14px;
-                        color: $black;
-                    }
-                }
-                
-                .result-description{
-                    clear:both;
-                    
-                }
-                .result-food-pairing-list{
-                    background-image: url(../images/icon_food_pairing.svg);
-                    background-repeat: no-repeat;
-                    background-size: 30px;
-                    padding-left: 71px;
-                    list-style: none;
-
-                }
-                ul li::before{
-                    content: "\25A0";
-                    color: $orange;
-                    
-                    font-size: 0.9em;
-                    display: inline-block;
-                    width: 2em;
-                    margin-left: 1em;
-                }
-                
-            }
-        }
-
-    }
-} 

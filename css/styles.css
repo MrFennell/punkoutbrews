@@ -35,18 +35,19 @@
   src: url(../fonts/Conformity/Conformity.TTF);
 }
 h2 {
-  font-family: Bungee_regular;
+  font-family: Bungee_regular, Arial, sans-serif;
 }
 
 p {
-  font-family: Catameran;
+  font-family: Catameran, Arial, sans-serif;
 }
 
 header #navbar-header {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0;
   background-color: #252a2b;
   overflow: hidden;
+  min-height: 112px;
 }
 header #navbar-header #navigation-logo-container {
   position: relative;
@@ -57,8 +58,8 @@ header #navbar-header #navigation-logo-container .navbar-brand {
   background-color: #844389;
 }
 header #navbar-header #navigation-logo-container .navbar-brand h1 {
-  font-family: Bungee_regular;
-  font-size: 37px;
+  font-family: Bungee_regular, Arial, sans-serif;
+  font-size: 41px;
   margin: 0;
   padding: 32px;
 }
@@ -78,11 +79,21 @@ header #navbar-header #nav-menu {
   height: 100%;
 }
 header #navbar-header #nav-menu li a {
-  font-family: Catamaran;
+  font-family: Catamaran, Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 600;
+}
+@media screen and (min-width: 1200px) {
+  header #navbar-header #nav-menu li a {
+    padding: 40px 20px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  header #navbar-header #nav-menu li a {
+    padding: 40px 40px;
+  }
 }
 header #navbar-header #nav-menu li a:hover {
   background-color: #844389;
@@ -91,30 +102,39 @@ header #navbar-header #nav-menu li:visited {
   background-color: #844389;
 }
 header #header-content {
-  padding: 53px 37px 53px 87px;
+  padding: 53px 55px 53px 87px;
 }
 header #header-content #header-welcome {
   padding-right: 87px;
 }
+@media screen and (min-width: 1024px) {
+  header #header-content #header-welcome {
+    padding-right: 161px;
+  }
+}
+header #header-content #header-welcome h2 {
+  font-size: 41px;
+}
 header #header-content #header-welcome #header-welcome-copy {
   padding-left: 22px;
-  font-size: 16px;
+  font-size: 22px;
   border-left: 8px solid #844389;
-  line-height: 24px;
+  line-height: 1.4em;
 }
 header #header-content #header-welcome #header-find-inner-punk {
   width: fit-content;
   margin: auto;
 }
 header #header-content #header-welcome #header-find-inner-punk a {
-  font-family: Conformity;
+  font-family: Conformity, Didot, serif;
   color: #844389;
-  font-size: 18px;
+  font-size: 32px;
 }
 header #header-content #header-welcome #header-find-inner-punk img {
-  height: 29px;
+  height: 47px;
   position: relative;
-  bottom: 4px;
+  bottom: 11px;
+  left: 8px;
 }
 header #header-content #header-mailing-list {
   background-color: #844389;
@@ -124,8 +144,8 @@ header #header-content #header-mailing-list {
 header #header-content #header-mailing-list h3 {
   color: #fff;
   background-color: #252a2b;
-  font-family: Bungee_Regular;
-  font-size: 19px;
+  font-family: Bungee_regular, Arial, sans-serif;
+  font-size: 29px;
   padding: 16px 34px;
   text-align: center;
   border-radius: 6px 6px 0 0;
@@ -135,14 +155,14 @@ header #header-content #header-mailing-list #header-mailing-list-interior {
 }
 header #header-content #header-mailing-list #header-mailing-list-interior img {
   display: block;
-  width: 55px;
+  height: 37px;
   margin: auto;
 }
 header #header-content #header-mailing-list #header-mailing-list-interior p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1em;
   color: #fff;
-  margin-top: 10px;
+  margin: 19px 0;
 }
 header #header-content #header-mailing-list #header-mailing-list-interior #header-mailing-list-form {
   display: flex;
@@ -153,36 +173,16 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
 header #header-content #header-mailing-list #header-mailing-list-interior #header-mailing-list-form input {
   width: 100%;
   padding: 6px;
-  font-size: 13px;
+  font-size: 17px;
 }
 header #header-content #header-mailing-list #header-mailing-list-interior #header-mailing-list-form button {
   color: #fff;
   background: #252a2b;
   border: 0;
   padding: 10px 39px;
-  margin-top: 16px;
+  margin-top: 25px;
   text-transform: uppercase;
-  font-size: 13px;
-}
-
-html, body {
-  height: 100%;
-}
-
-h2 {
-  font-family: Bungee_regular;
-}
-
-p {
-  font-family: Catameran;
-}
-
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
+  font-size: 17px;
 }
 
 #set-list #set-list-header {
@@ -196,7 +196,7 @@ p {
   padding: 0 26px 0 87px;
 }
 #set-list #set-list-header h3 {
-  font-family: Bungee_regular;
+  font-family: Bungee_regular, Arial, sans-serif;
   color: #fff;
   margin: 0;
 }
@@ -265,7 +265,7 @@ p {
   margin-left: 33px;
 }
 #set-list #set-list-header #set-list-header-controls #set-list-search input, #set-list #set-list-header #set-list-header-controls #set-list-search button {
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 0;
   border: 0;
   background-color: #fff;
@@ -284,12 +284,12 @@ p {
   padding-left: 45px;
 }
 #set-list #results .result .result-text .result-name {
-  font-family: Bungee_Regular;
+  font-family: Bungee_regular, Arial, sans-serif;
   font-size: 25px;
   margin: 0;
 }
 #set-list #results .result .result-text .result-tagline {
-  font-family: Conformity;
+  font-family: Conformity, Didot, serif;
   font-size: 25px;
   color: #dd9937;
 }
@@ -331,6 +331,18 @@ p {
   display: inline-block;
   width: 2em;
   margin-left: 1em;
+}
+
+html, body {
+  height: 100%;
+}
+
+h2 {
+  font-family: Bungee_regular, Arial, sans-serif;
+}
+
+p {
+  font-family: Catameran, Arial, sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
