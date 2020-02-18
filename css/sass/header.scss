@@ -45,7 +45,6 @@ header{
                     
                 }
             }
-            
             #navigation-beer-logo{
                 position: absolute;
                 left: 35px;
@@ -69,9 +68,6 @@ header{
         #nav-menu{
             height: 100%;
             li{
-                @media screen and (min-width: 992px) {
-                   
-                }
                 a{
                     font-family: Catamaran, Arial, sans-serif;
                     text-transform: uppercase;
@@ -104,7 +100,6 @@ header{
             padding: 38px 44px 53px 46px; 
         }
         #header-welcome{
-
             padding: 0 0 36px 0;
             @media screen and (min-width: 768px) {
                 padding: 0 87px 0 0;
@@ -184,7 +179,6 @@ header{
                         text-transform:uppercase;
                         font-size: 17px;
                     }
-
                 }
             }
         }

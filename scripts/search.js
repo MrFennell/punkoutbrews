@@ -131,7 +131,4 @@ function filterResults(data){
     }
 }
 
-
-
-
  });
