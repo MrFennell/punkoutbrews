@@ -1,4 +1,4 @@
-//the .scss file is used to make the SASS changes that will be compiled into styles.css.
+//this .scss file is used to compile the SASS changes that will be compiled into styles.css.
 
 $purple: #844389;
 $black: #252a2b;
@@ -11,9 +11,9 @@ $font-size-smaller: 16px; //12 pt font
 $font-size-larger: 32px; //24 pt font
 $font-size-largest: 41px; //31 pt font
 
-@import "./fonts.scss"; 
-@import "./header.scss";
-@import "./setlist.scss";
+@import "./sass/fonts.scss"; 
+@import "./sass/header.scss";
+@import "./sass/setlist.scss";
 
 html,body {
     height:100%;

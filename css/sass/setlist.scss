@@ -8,14 +8,25 @@
         justify-content: space-between;
         height: 60px;
         padding: 0 26px 0 87px;
+        @media screen and (max-width: 800px) { //rearrange set list header for smaller screens
+            flex-direction: column;
+            height: auto;
+            padding: 26px 0;
+        }
         h3{
             font-family: Bungee_regular, Arial, sans-serif;
             color: $white;
             margin: 0;
+            @media screen and (max-width: 800px) { //rearrange set list header for smaller screens
+                padding-bottom:16px;
+            }
         }
         #set-list-header-controls{
             display: flex;
             height: 100%;
+            @media screen and (max-width: 800px) { //rearrange set list header for smaller screens
+                
+            }
             #filter{
                 #filter-link{
                     height: 100%;
@@ -24,6 +35,7 @@
                     padding: 0 60px 0 20px;
                     cursor: pointer;
                     background-color: $purple;
+ 
                     img{
                         margin-right: 12px;
                         height: 26px;
@@ -51,21 +63,20 @@
                     }
                     #filter-checkboxes{
                         display: grid;
-                        grid-template-columns: 80px 80px 80px 80px;
-                        grid-template-rows: 40px;
+                        grid-template-columns: 85px 85px 85px 85px;
+                        grid-template-rows: 30px 30px 30px 30px;
                         padding: 24px 21px 30px 30px;
                         input[type=checkbox]{
                             border: 0;
                         }
                         label{
                             color: $white;
+                            font-size: $font-size-smaller;
                         }
                     }
-                    
                     .filter-section-content{
                         background-color: #9b82a0;
                     }
-
                     .slider-container{
                         padding: 24px 0 30px 0;
                     }
@@ -79,6 +90,10 @@
                 height: 52%;
                 margin: auto; 
                 margin-left: 33px;
+                @media screen and (max-width: 800px) { //adjust form positions for smaller screens
+                    margin: 0;
+                    padding: 0;
+                }
                 input, button{
                     font-size: $font-size-smaller;
                     border-radius: 0;
@@ -92,13 +107,34 @@
         min-height: 200px;
         padding-top:72px;
         padding: 72px 0 0 88px;
+        @media (max-width: 767.98px) { 
+            padding: 72px 0 0 0;
+         }
         .result{
             width: 80%;
             display: flex;
             padding-bottom: 115px;
-
+            
+            @media (max-width: 575.98px) { 
+                flex-direction: column-reverse;
+            }
+            @media (max-width: 767.98px) { 
+                margin: auto;
+             }
+            img{
+                display: block;
+                @media (max-width: 575.98px) { 
+                    
+                    width: auto;
+                    margin: auto;
+                    margin-top: 30px;
+                }
+            }
             .result-text{
                 padding-left: 45px;
+                @media (max-width: 575.98px) { 
+                    padding-left: 15px;
+                }
                 .result-name{
                     font-family: Bungee_regular,  Arial, sans-serif;
                     font-size: 25px;
@@ -109,7 +145,6 @@
                     font-size: 25px;
                     color: $orange;
                 }
-                 
                 .result-ibu{
                     float: left;
                     color: $grey;
@@ -120,9 +155,7 @@
                         margin-right: 14px;
                         color: $black;
                     }
-                    
                 }
-                
                 .result-abv{
                     float: left;
                     color: $grey;
@@ -133,7 +166,6 @@
                         color: $black;
                     }
                 }
-                
                 .result-description{
                     clear:both;
                     
@@ -142,22 +174,18 @@
                     background-image: url(../images/icon_food_pairing.svg);
                     background-repeat: no-repeat;
                     background-size: 30px;
-                    padding-left: 71px;
+                    padding-left: 35px;
                     list-style: none;
-
                 }
-                ul li::before{
+                ul li::before{ //styling for bullet points
                     content: "\25A0";
                     color: $orange;
-                    
                     font-size: 0.9em;
                     display: inline-block;
                     width: 2em;
                     margin-left: 1em;
                 }
-                
             }
         }
-
     }
-} 
+}

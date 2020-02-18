@@ -8,14 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon" />
 
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/fd536d6465.js" crossorigin="anonymous"></script>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <link rel="stylesheet" href="css/sliders/jquery.range.css">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -26,11 +24,12 @@
     <nav class="navbar navbar-dark navbar-expand-xl" id="navbar-header" role="navigation">
         <div id="navigation-logo-container">
           <img id="navigation-beer-logo" src="images/icon_beer_mug.svg"  height="80px"/>
+          
           <a href="#" class="navbar-brand"> <h1>Punk Out Brews</h1></a>
           <img id="navigation-splatter" src="images/splatter.svg"  height="120px"/>
         </div>
 
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu"  aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <button type="button" id="hamburger-toggler" class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu"  aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -126,6 +125,66 @@
                     Fruity
                   </label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="toasty" id="toasty">
+                  <label class="form-check-label" for="toasty">
+                    Toasty
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="earthy" id="earthy">
+                  <label class="form-check-label" for="earthy">
+                    Earthy
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="sour" id="sour">
+                  <label class="form-check-label" for="sour">
+                    Sour
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="dry" id="dry">
+                  <label class="form-check-label" for="dry">
+                    Dry
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="caramel" id="caramel">
+                  <label class="form-check-label" for="caramel">
+                    Caramel
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="smokey" id="smokey">
+                  <label class="form-check-label" for="smokey">
+                    Smokey
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="tart" id="tart">
+                  <label class="form-check-label" for="tart">
+                    Tart
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="crisp" id="crisp">
+                  <label class="form-check-label" for="crisp">
+                    Crisp
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="toffee" id="toffee">
+                  <label class="form-check-label" for="toffee">
+                    Toffee
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="spicey" id="spicey">
+                  <label class="form-check-label" for="spicey">
+                    Spicey
+                  </label>
+                </div>
             </div>
             <div id="filter-section-ibu" class="filter-section">
               <p class="filter-section-title">IBU</p>
@@ -138,23 +197,22 @@
               <p class="filter-section-title">ABV</p>
               <div class="slider-container" class="filter-section-content">
                 <input class="range-slider-abv" type="hidden" value="5,11"/>
-
               </div>
             </div>
           </form>
         </div>
       </div>
-      <div id="set-list-search" class="input-group ">
+      <form id="set-list-search" class="input-group ">
         <input class="form-control" id="beerSearchInput" type="search"  placeholder="Search for Beer Name or Type" aria-label="Search for Beer Name or Type">
         <span class="input-group-append">
           <button class="btn" id="beerSearch" type="submit">
                 <i class="fa fa-search"></i>
           </button>
         </span>
-    </div>
+      </form>
     </div>
 </div>
-<div id="results">  
+<div id="results">
 </div>
 <script src="scripts/search.js"></script>
 <script src="scripts/sliders/sliderSettings.js"></script>

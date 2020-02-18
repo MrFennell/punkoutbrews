@@ -44,10 +44,24 @@ p {
 
 header #navbar-header {
   margin: 0;
-  padding: 0 0 0 0;
+  padding: 0;
   background-color: #252a2b;
   overflow: hidden;
   min-height: 112px;
+}
+@media screen and (max-width: 800px) {
+  header #navbar-header {
+    background-color: #844389;
+  }
+}
+header #navbar-header #hamburger-toggler {
+  margin: 0 44px 0 0;
+}
+@media screen and (max-width: 640px) {
+  header #navbar-header #hamburger-toggler {
+    margin: auto;
+    margin-bottom: 15px;
+  }
 }
 header #navbar-header #navigation-logo-container {
   position: relative;
@@ -57,11 +71,22 @@ header #navbar-header #navigation-logo-container .navbar-brand {
   margin: 0;
   background-color: #844389;
 }
+@media screen and (max-width: 700px) {
+  header #navbar-header #navigation-logo-container .navbar-brand {
+    padding: 0 0 0 80px;
+  }
+}
 header #navbar-header #navigation-logo-container .navbar-brand h1 {
   font-family: Bungee_regular, Arial, sans-serif;
   font-size: 41px;
   margin: 0;
   padding: 32px;
+}
+@media screen and (max-width: 500px) {
+  header #navbar-header #navigation-logo-container .navbar-brand h1 {
+    font-size: 7vw;
+    padding: 32px 39px 10px 12px;
+  }
 }
 header #navbar-header #navigation-logo-container #navigation-beer-logo {
   position: absolute;
@@ -69,11 +94,21 @@ header #navbar-header #navigation-logo-container #navigation-beer-logo {
   top: 13px;
   transform: rotateZ(17deg);
 }
+@media screen and (max-width: 500px) {
+  header #navbar-header #navigation-logo-container #navigation-beer-logo {
+    height: 85%;
+  }
+}
 header #navbar-header #navigation-logo-container #navigation-splatter {
   position: absolute;
   right: -81px;
   height: 117px;
   top: -6px;
+}
+@media screen and (max-width: 800px) {
+  header #navbar-header #navigation-logo-container #navigation-splatter {
+    display: none;
+  }
 }
 header #navbar-header #nav-menu {
   height: 100%;
@@ -84,6 +119,8 @@ header #navbar-header #nav-menu li a {
   color: #fff;
   font-size: 22px;
   font-weight: 600;
+  background-color: #252a2b;
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   header #navbar-header #nav-menu li a {
@@ -104,12 +141,22 @@ header #navbar-header #nav-menu li:visited {
 header #header-content {
   padding: 53px 55px 53px 87px;
 }
+@media screen and (max-width: 575.98px) {
+  header #header-content {
+    padding: 38px 44px 53px 46px;
+  }
+}
 header #header-content #header-welcome {
-  padding-right: 87px;
+  padding: 0 0 36px 0;
+}
+@media screen and (min-width: 768px) {
+  header #header-content #header-welcome {
+    padding: 0 87px 0 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   header #header-content #header-welcome {
-    padding-right: 161px;
+    padding: 0 161px 0 0;
   }
 }
 header #header-content #header-welcome h2 {
@@ -195,10 +242,22 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   height: 60px;
   padding: 0 26px 0 87px;
 }
+@media screen and (max-width: 800px) {
+  #set-list #set-list-header {
+    flex-direction: column;
+    height: auto;
+    padding: 26px 0;
+  }
+}
 #set-list #set-list-header h3 {
   font-family: Bungee_regular, Arial, sans-serif;
   color: #fff;
   margin: 0;
+}
+@media screen and (max-width: 800px) {
+  #set-list #set-list-header h3 {
+    padding-bottom: 16px;
+  }
 }
 #set-list #set-list-header #set-list-header-controls {
   display: flex;
@@ -239,8 +298,8 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
 }
 #set-list #set-list-header #set-list-header-controls #filter #filter-form #filter-checkboxes {
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-template-rows: 40px;
+  grid-template-columns: 85px 85px 85px 85px;
+  grid-template-rows: 30px 30px 30px 30px;
   padding: 24px 21px 30px 30px;
 }
 #set-list #set-list-header #set-list-header-controls #filter #filter-form #filter-checkboxes input[type=checkbox] {
@@ -248,6 +307,7 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
 }
 #set-list #set-list-header #set-list-header-controls #filter #filter-form #filter-checkboxes label {
   color: #fff;
+  font-size: 16px;
 }
 #set-list #set-list-header #set-list-header-controls #filter #filter-form .filter-section-content {
   background-color: #9b82a0;
@@ -264,6 +324,12 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   margin: auto;
   margin-left: 33px;
 }
+@media screen and (max-width: 800px) {
+  #set-list #set-list-header #set-list-header-controls #set-list-search {
+    margin: 0;
+    padding: 0;
+  }
+}
 #set-list #set-list-header #set-list-header-controls #set-list-search input, #set-list #set-list-header #set-list-header-controls #set-list-search button {
   font-size: 16px;
   border-radius: 0;
@@ -275,13 +341,43 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   padding-top: 72px;
   padding: 72px 0 0 88px;
 }
+@media (max-width: 767.98px) {
+  #set-list #results {
+    padding: 72px 0 0 0;
+  }
+}
 #set-list #results .result {
   width: 80%;
   display: flex;
   padding-bottom: 115px;
 }
+@media (max-width: 575.98px) {
+  #set-list #results .result {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767.98px) {
+  #set-list #results .result {
+    margin: auto;
+  }
+}
+#set-list #results .result img {
+  display: block;
+}
+@media (max-width: 575.98px) {
+  #set-list #results .result img {
+    width: auto;
+    margin: auto;
+    margin-top: 30px;
+  }
+}
 #set-list #results .result .result-text {
   padding-left: 45px;
+}
+@media (max-width: 575.98px) {
+  #set-list #results .result .result-text {
+    padding-left: 15px;
+  }
 }
 #set-list #results .result .result-text .result-name {
   font-family: Bungee_regular, Arial, sans-serif;
@@ -321,7 +417,7 @@ header #header-content #header-mailing-list #header-mailing-list-interior #heade
   background-image: url(../images/icon_food_pairing.svg);
   background-repeat: no-repeat;
   background-size: 30px;
-  padding-left: 71px;
+  padding-left: 35px;
   list-style: none;
 }
 #set-list #results .result .result-text ul li::before {
